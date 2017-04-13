@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>WM Too Many Leathers</name>
+	<author>Wishmaster</author>
+	<targetversion>0.16.1393</targetversion>
+	<description>
+&lt;color=orange&gt;&lt;b&gt;Requires HugsLib.&lt;/b&gt;&lt;/color&gt; 
+
+		Merges all identicals leathers into tiered leathers.
+	
+  </description>
+	<url>https://ludeon.com/forums/index.php?topic=30708.0</url>
+</ModMetaData>

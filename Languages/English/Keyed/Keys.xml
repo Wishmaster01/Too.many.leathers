@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<LessLeatherExtraModInfo>* Too many leathers mod info *</LessLeatherExtraModInfo>
+	<TierLeatherName>Tier {0} leather</TierLeatherName>
+	<TierLeatherDesc>Universal leather dropped by the following species:\n{0}.</TierLeatherDesc>
+	<SpecieExtraDesc>This specie will give [{0}] when butchered.</SpecieExtraDesc>
+	
+	<UpdateWorldItemsDialogText>Leathers items that have been merged have been found in this save game.\nWould you like to change them to the new tiered leathers ?</UpdateWorldItemsDialogText>
+	<UpdateWorldItemsDialogTextDoUpdate>Update items</UpdateWorldItemsDialogTextDoUpdate>
+	<UpdateWorldItemsDialogTextDoNothing>Do nothing</UpdateWorldItemsDialogTextDoNothing>
+	
+<!--	<UpdateOldLeathersCommandTitle>Old leathers items.</UpdateOldLeathersCommandTitle>
+	<UpdateOldLeathersCommandDesc>Merges all old leathers items in all maps and caravans.</UpdateOldLeathersCommandDesc>
+	<UpdateOldLeathersCommandButton>Update old items.</UpdateOldLeathersCommandButton>-->
+</LanguageData>
