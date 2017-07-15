@@ -13,7 +13,7 @@ namespace WM.TooManyLeathers
 		{
 			get
 			{
-				return DefDatabase<ThingDef>.AllDefs.Where((arg) => arg.race != null && arg.race.leatherDef != null);
+				return DefDatabase<ThingDef>.AllDefs.Where((arg) => arg.race != null && arg.race.leatherDef != null && arg.race.useLeatherFrom == null);
 			}
 		}
 
