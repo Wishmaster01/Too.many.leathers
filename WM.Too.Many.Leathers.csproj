@@ -12,7 +12,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType></DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>Assemblies</OutputPath>
+    <OutputPath>Mods\WM Too Many Leathers\Assemblies</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -21,17 +21,27 @@
       <CustomCommands>
         <Command>
           <type>AfterBuild</type>
-          <command>..\..\RimWorldWin.exe</command>
+          <command>deploy.cmd</command>
+          <externalConsole>True</externalConsole>
         </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
-    <OutputPath>Assemblies</OutputPath>
+    <OutputPath>Mods\WM Too Many Leathers\Assemblies</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>deploy.cmd</command>
+          <externalConsole>True</externalConsole>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -39,28 +49,39 @@
       <HintPath>..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>..\HugsLib\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="HugsLib">
-      <HintPath>..\HugsLib\Assemblies\HugsLib.dll</HintPath>
+      <HintPath>..\..\..\..\..\SteamLibrary\steamapps\workshop\content\294100\1181070440\Assemblies\HugsLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\RimWorldWin_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\RimWorldWin_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="About\About.xml" />
-    <None Include="About\version.xml" />
-    <None Include="Languages\English\Keyed\Keys.xml" />
+    <None Include="Mods\WM Too Many Leathers\About\About.xml" />
+    <None Include="Mods\WM Too Many Leathers\About\version.xml" />
+    <None Include="Mods\WM Too Many Leathers\Languages\English\Keyed\Keys.xml" />
+    <None Include="Mods\WM Too Many Leathers\Assemblies\WM TooManyLeathers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="source\ModControler.cs" />
+    <Compile Include="source\ModController.cs" />
     <Compile Include="source\Utils.cs" />
     <Compile Include="source\LeatherHash.cs" />
     <Compile Include="source\WorldUpdate.cs" />
+    <Compile Include="source\MyDefClass.cs" />
+    <Compile Include="source\SpawnSetup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Defs\" />
+    <Folder Include="Mods\" />
+    <Folder Include="Mods\WM Too Many Leathers\" />
+    <Folder Include="Mods\WM Too Many Leathers\About\" />
+    <Folder Include="Mods\WM Too Many Leathers\Languages\" />
+    <Folder Include="Mods\WM Too Many Leathers\Languages\English\Keyed\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,6 +19,16 @@ namespace WM.TooManyLeathers
 
 		internal static Dictionary<ThingDef, ThingDef> ConvertedLeathers = new Dictionary<ThingDef, ThingDef>();
 
+		internal static bool IsDiscardedDef(ThingDef stuff)
+		{
+			return (ConvertedLeathers.ContainsKey(stuff));
+		}
+
+		internal static ThingDef ConvertDef(ThingDef stuff)
+		{
+			return (ConvertedLeathers[stuff]);
+		}
+
 		internal static IEnumerable<Thing> AllWorldDiscardedLeatherThings()
 		{
 #if DEBUG
@@ -44,6 +54,7 @@ namespace WM.TooManyLeathers
 
 				return allLeatherThings;
 		}
+
 
 
 		//public static ThingDef MakeNewLeatherDef(this ThingDef leatherDef)
